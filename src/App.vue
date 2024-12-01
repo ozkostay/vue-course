@@ -6,6 +6,7 @@
       <!-- <RouterView /> -->
       <router-view />
     </div>
+    {{ movieStore.movies }}
   </div>
 </template>
 
@@ -13,12 +14,16 @@
 // import AppMain from "./components/AppMain.vue";
 import HeaderMain from "./components/HeaderMain.vue";
 import SideLeft from "./components/SideLeft.vue";
+import { useMovieStore } from "./stores/MovieStore";
+
+// const movieStore = useMovieStore();
 
 export default {
   name: "App",
   data() {
     return {
       title: "fffffff",
+      movieStore: useMovieStore(),
     };
   },
   components: {
